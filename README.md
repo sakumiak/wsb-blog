@@ -12,3 +12,5 @@ To polecenie powinno utworzyć nową grupę zasobów.
 3. UWAGA!! <nazwa-bazy-danych> musi być globalnie unikalna, a w <nazwa-grupy-zasobów> powinna zostać wprowadzona grupa, którą utworzyliśmy w Tworzeniu Grupy Zasobów.
 4. Do terminala wprowadź komendę `az cosmosdb list-keys --name <nazwa-wcześniej-utworzonej-bazy-danych> --resource-group <nazwa-grupy-zasobów>`
 5. Z wyświetlonego komunikatu skopiuj **"primaryMasterKey"**
+6. Wejdź do **app.js** w swoim lokalnym repozytorium i do zmiennej **mongoDB** w linii 30 przypisz wartość 'mongodb://<nazwa-projektu>:<primary-master-key>@<nazwa-projektu>.documents.azure.com:10250/mean?ssl=true&sslverifycertificate=false'. Pamiętaj, żeby miejsca w <...> wypełnić odpowiednimi wartościami.
+  
