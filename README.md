@@ -39,3 +39,11 @@ az webapp create --resource-group <nazwa-grupy-zasobów> --plan <nazwa-planu> --
 ### UWAGA
 Pamiętaj, że nazwa Web Appi musi być **globalnie unikalna**.
 # Deploy przez GitHub
+1. W GUI Azure wejdź do wcześniej utworzonego Web Appi. W górnym pasku znadjduje się opcja **Pobież profil publikowaia**. Kliknij ją i pobierz zawartość. 
+2. Stórz pusty projekt na githubie. 
+3. Wejdź w **Settings -> Secrets** na stronie nowo utworzonego repozytorium 
+4. Utwórz nowy Sekret o nazwie `AZURE_WEBAPP_NAME` i przypisz mu jako wartość nazwę swojego Web Appi, które zostało utworzone w Azure. 
+5. Utwóz nowy Sekret o nazwie `AZURE_WEBAPP_PUBLISH_PROFILE`, a następnie wklej zawartość pliku pobranego w punkcie **1**. 
+6. Zapushuj zawartość lokalnego repozytorium na którym w tym momencie powininna znajdować się kopia tego repozytorium, której została przypisana baza danych utworzona uprzednio na platformie Azure. 
+7. Wejdź w zakładkę **Action** na stronie nowo utworzenego repozytorium i poczekaj aż wdrożenie się zakończy. 
+8. Po tym wejdź na stronę swojego Web Appi. Aplikacja z GitHuba powinna zostać wdrożona. 
