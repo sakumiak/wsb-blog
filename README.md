@@ -15,7 +15,7 @@ To polecenie powinno utworzyć nową grupę zasobów.
 6. Wejdź do **app.js** w swoim lokalnym repozytorium i do zmiennej **mongoDB** w linii 30 przypisz wartość `'mongodb://<nazwa-projektu>:<primary-master-key>@<nazwa-projektu>.documents.azure.com:10250/mean?ssl=true&sslverifycertificate=false'`. Pamiętaj, żeby miejsca w <...> wypełnić odpowiednimi wartościami.
   
 # Tworzenie Planu
-
+Aby stworzyć plan należy wprowadzić do terminala w Azure komendę `az appservice plan create --resource-group <nazwa-grupy-zasobów> --name <nazwa-planu> --is-linux --sku FREE`
 # Tworzenie Web App Service'u
 
 # Deploy przez GitHub
