@@ -36,6 +36,6 @@ Aby utworzyć Web Appi należy wprowadzić komendę
 ```
 az webapp create --resource-group <nazwa-grupy-zasobów> --plan <nazwa-planu> --name <nazwa-web-appi> --runtime "NODE|12-lts"
 ```
-## UWAGA
+### UWAGA
 Pamiętaj, że nazwa Web Appi musi być **globalnie unikalna**.
 # Deploy przez GitHub
