@@ -3,7 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var mongoose = require('mongoose')
+var mongoose = require('mongoose');
+var methodOverride = require('method-override')
 
 //Routes declaration
 var indexRouter = require('./routes/index');
@@ -24,12 +25,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Database connection
 //Local connection
-//var mongoDB = 'mongodb://127.0.0.1/my_db';
+var mongoDB = 'mongodb://127.0.0.1/my_db';
 //Azure connection
-var mongoDB = 'mongodb://kmajewski2345wsb-projekt-db:CyOcSIXcvas6VLfLRAxiMgOFcDGxvKceJuAqnkBAS1zEHuY9FKPlJOmKBUwEasUVs3FAgfezEQHefWhbVCvKgw==@kmajewski2345wsb-projekt-db.documents.azure.com:10250/mean?ssl=true&sslverifycertificate=false';
+//var mongoDB = 'mongodb://kmajewski2345wsb-projekt-db:CyOcSIXcvas6VLfLRAxiMgOFcDGxvKceJuAqnkBAS1zEHuY9FKPlJOmKBUwEasUVs3FAgfezEQHefWhbVCvKgw==@kmajewski2345wsb-projekt-db.documents.azure.com:10250/mean?ssl=true&sslverifycertificate=false';
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.use(express.urlencoded({ extended: false}));
+app.use(methodOverride('_method'))
 
 //Routes init
 app.use('/', indexRouter);

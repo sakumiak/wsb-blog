@@ -19,7 +19,12 @@
           <div class="card-subtitle text-muted mb-2">
             <%= article.creationDate.toLocaleDateString() %>
           </div>
-          <a href="articles/<%= article.id %>" class="mt-4">Read more</a>
+          <div>
+              <a href="articles/<%= article.id %>" class="btn btn-primary">Read more</a>
+          </div>
+          <form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
         </div>
       <% }) %>
     </div>
