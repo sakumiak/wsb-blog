@@ -3,7 +3,7 @@ Powyższa aplikacja to prosty blog z możliwością dodawa, wyświetlania i usuw
 
 # Tworzenie Grupy Zasobów
 W konsoli Azure'a po zalogowaniu wprowadź komendę 
-`az group create --name <nazwa-grupy> --location westeurope`.
+```az group create --name <nazwa-grupy> --location westeurope```.
 To polecenie powinno utworzyć nową grupę zasobów.
 
 # Tworzenie Bazy Danych
