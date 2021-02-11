@@ -14,8 +14,8 @@ To polecenie powinno utworzyć nową grupę zasobów.
 5. Z wyświetlonego komunikatu skopiuj **"primaryMasterKey"**
 6. Wejdź do **app.js** w swoim lokalnym repozytorium i do zmiennej **mongoDB** w linii 30 przypisz wartość `'mongodb://<nazwa-projektu>:<primary-master-key>@<nazwa-projektu>.documents.azure.com:10250/mean?ssl=true&sslverifycertificate=false'`. Pamiętaj, żeby miejsca w <...> wypełnić odpowiednimi wartościami.
   
-#Tworzenie Planu
+# Tworzenie Planu
 
-#Tworzenie Web App Service'u
+# Tworzenie Web App Service'u
 
-#Deploy przez GitHub
+# Deploy przez GitHub
