@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Local connection
 //var mongoDB = 'mongodb://127.0.0.1/my_db';
 //Azure connection
-var mongoDB = 'mongodb://127.0.0.1/my_db';
+var mongoDB = 'mongodb://kmajewski2345wsb-projekt-db:CyOcSIXcvas6VLfLRAxiMgOFcDGxvKceJuAqnkBAS1zEHuY9FKPlJOmKBUwEasUVs3FAgfezEQHefWhbVCvKgw==@kmajewski2345wsb-projekt-db.documents.azure.com:10250/mean?ssl=true&sslverifycertificate=false';
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.use(express.urlencoded({ extended: false}));
