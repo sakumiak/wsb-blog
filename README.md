@@ -1,9 +1,14 @@
 # Wstęp
 Powyższa aplikacja to prosty blog z możliwością dodawa, wyświetlania i usuwania artykułów. Głównym celem tego projektu jest zapoznanie się z platformą Azure. Wszystkie polecenia podawane w poniższym poradniku będą używały Azure CLI.
 
-# Tworzenie Grupy zasobów
+# Tworzenie Grupy Zasobów
 W konsoli Azure'a po zalogowaniu wprowadź komendę 
-`az group create --name <nazwa-grupy> --location westeurope`
+`az group create --name <nazwa-grupy> --location westeurope`.
+To polecenie powinno utworzyć nową grupę zasobów.
 
 # Tworzenie Bazy Danych
-1. Najpierw stwórz lokalne repozytorium tego projektu na swojej maszynie. 
+1. Najpierw stwórz lokalny obraz repozytorium tego projektu na swojej maszynie.
+2. Wprowadź komendę `az cosmosdb create --name <nazwa-bazy-danych> --resource-group <nazwa-grupy-zasobów> --locations regionName=westeurope --kind MongoDB --enable-automatic-failover true --default-consistency-level BoundedStaleness --max-interval 300 --max-staleness-prefix 100000`
+3. UWAGA!! <nazwa-bazy-danych> musi być globalnie unikalna, a w <nazwa-grupy-zasobów> powinna zostać wprowadzona grupa, którą utworzyliśmy w Tworzeniu Grupy Zasobów.
+4. Do terminala wprowadź komendę `az cosmosdb list-keys --name <nazwa-wcześniej-utworzonej-bazy-danych> --resource-group <nazwa-grupy-zasobów>`
+5. Z wyświetlonego komunikatu skopiuj **"primaryMasterKey"**
